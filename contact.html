@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Häst-kunskap samlad på en webbplats">
+    <meta name="author" content="Yvonne">
+    <link rel="icon" href="./images/images__horse_icon_237x212.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Häst-kunskap - Kontakt</title>
+</head>
+
+<body> 
+    <header>        
+        <section>   <!-- create a hero section-->
+
+        </section>
+        <nav>                                       <!-- Navigationbar and hamburger menu -->
+            <ul>                                    <!-- always visible in navigation bar-->
+                <li><a href="index.html">Hem</a> </li>
+            </ul>
+                                                    <!-- hamburger menu -->
+            <label for="menu" tabindex="0">
+                &#9776;                             <!-- hamburger-ikon (UTF-8 symbol trigram for heaven) -->
+            </label>
+            <input id="menu" type="checkbox">       <!-- checkbox to keep track of if the hamburger menu is klicked or not -->
+
+            <ul>                                    <!-- visible or not, collapsable menu part -->
+                <li><a href="anatomi.html">Anatomi</a></li>
+                <li><a href="about.html">Om oss</a></li>
+                <li><a href="contact.html" class="nav-active">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+<hr>
+
+    <main>      
+        <h2>Kontakt</h2>
+        
+        <p>Vänligen fyll i formuläret!</p>
+        <form action="contact_response.html" method="post">
+            <label for="firstname">Förnamn:</label><br>
+            <input type="text" id="firstname" name="firstname" required autofocus placeholder="Förnamn"><br><br>
+
+            <label for="lastname">Efternamn:</label><br>
+            <input type="text" id="lastname" name="lastname" placeholder="Efternamn"><br><br>
+
+            <label for="email-address">E-post:</label><br>
+            <input type="email" id="email-address" name="email-address" required placeholder="namn@outlook.com"><br><br>
+
+            <label for="message-type">Typ av meddelande</label><br><br>
+                <input type="radio" id="question" name="message-type" value="question">
+                <label for="question">Fråga</label>
+
+                <input type="radio" id="suggestion" name="message-type" value="suggestion">
+                <label for="suggestion">Önskemål om häst-fakta</label>
+
+                <input type="radio" id="other" name="message-type" value="other">
+                <label for="other">Annat</label><br><br>
+
+            <label for="message">Meddelande:</label><br>
+            <textarea id="message" name="message" rows="5" cols="50" maxlenght="1000"></textarea><br><br>
+
+            <input type="reset" value="Återställ formuläret"><br><br>
+            <input type="submit" value="Sänd">
+            <br><br>
+        </form>
+
+    </main>
+<hr>
+    <footer>    
+        <p>Upphovsrätt©2025 Häst-kunskap Alla rättigheter reserverade. </p>
+    </footer>    
+</body>
+</html>
