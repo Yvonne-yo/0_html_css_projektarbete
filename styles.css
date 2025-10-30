@@ -1,23 +1,60 @@
 /* CSS styles for Häst-kunskap*/
 /* ----- ?????????? ----- */    /* template divide parts of file */
 
+/* ----- GENERAL STYLING */
+html {
+    font-size: 16px;
+
+}
+    h1 {                                
+        font-size: clamp(2rem, 2.5vw, 3rem);      /* yvop fix values*/
+    }
+    h2 {
+        font-size: clamp(1.5rem, 2.2vw, 2rem);    /* yvop fix values*/
+    }
+    h3 {
+        font-size: clamp(1.2rem, 1.5vw, 1.8rem);    /* yvop fix values*/
+    }
+    p {
+        font-size: clamp(1rem, 1.2vw, 1.5rem);      /* yvop fix values*/
+    }
+
+body {
+    width: 100%;
+    max-width: 64rem;                   /* 64rem=1024px (64rem x 16px) */
+    margin: 0 auto;                     /* 0 for top and bottom, auto for left and right */
+
+}
+
 /* ----- HERO ----------- */
 .hero-section{                  /* yvop fix styling, kolla både jättestor och lite skärm*/
     background-image: url(./images/03-horse-genome-nationalgeographic_1241846_1600x900.webp);
-    background-repeat: no-repeat;       /* repeat/no-reapeat/repeat-x/repeat-y */
-    background-position: center center; /* */
-    background-color: aqua;           /* */
-    background-size: cover ;            /*cover/contain/fill*/
-    padding: 50px;                     /* padding-top: 500px;  */ 
+    background-repeat: no-repeat;       /* values: repeat/no-reapeat/repeat-x/repeat-y */
+
+    background-position: center center; /* [xpos ypos] values: left/right/top/center/bottom */
+    background-color: aqua;           /* setting background color visible for learning */
+    background-size: cover;             /* auto (original image size)/
+                                           cover (resize to cover container, can stretch or cut to fit)/
+                                           contain (resize to make sure image fully visible) */
+    
+    padding: 50px;                      /* padding: 50px;  */ 
+/*    color: white;                     /* text color on bg-img*/
     font-size: 24px;                    /* */
     font-weight: bold;                  /* */
     text-align: center;                 /* */
 }
 
 /* ----- NAVIGATION ----- */
-nav {                       /* navigation on large screens */
+/* nesting CSS syntax
+parentrule {
+  css declarations;
+  & childrule {
+    css declarations;  } 
+}                           */
+
+nav {                       /* navigation general settings */
     background-color: greenyellow;
-    color: red;
+/*    color: black; */
     display: flex;
     justify-content: space-between;
 }
@@ -32,12 +69,39 @@ nav input[type="checkbox"], /* invisible checkbox and label*/
 nav label {
     display:none;
 }
-nav img {
-    border: none;
-    width:  auto;           /* yvop fixa styling för ikon-storlek  */
+nav a {                     /* menu items (links) styling*/
+    display: block;         /* to make padding work */
+    color: black;         /* link text color*/
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;  /* remove underlining */
 }
+nav a:hover{                /* yvop fix hover over menu item changes color*/
+    background-color: aqua;
+    color: white;
+}
+nav img {                   /* yvop fix hover over menu item changes color affects img too since it is a link*/
+    border: none;
+    width:  20px;           /* yvop fixa styling för hästhuvud ikon-storlek  */
+}
+nav img:hover{
+
+}
+.nav-active {               /* class: navigation active page, marks acitve menu choice*/
+    font-weight: bold;
+    border: solid;
+    background-color: red;
+}
+
+@media (max-width: 1024px){
+nav {                       /* navigation on medium screens */
+    background-color: lightblue;        /* change nav background color for max-width 1024 */
+}
+}
+
 @media (max-width: 640px){  /* navigation on small screens */
     nav {
+        background-color: lightpink;     /* change nav background color for max-width 640 */
         flex-direction: row;
         flex-wrap: wrap;
         margin-left: 0;
@@ -57,7 +121,8 @@ nav img {
         padding: 0.5em;
     }
 
-    input[type="checkbox"]:not(:checked)+ul {
+    nav input[type="checkbox"]:not(:checked)+ul {
+        /* input[type="checkbox"]:not(:checked)+ul { */
     display:none;
     }
     nav label {
@@ -67,17 +132,7 @@ nav img {
     line-height: 1.6em;
     align-self: center;
     }
-    nav img{
-        border: solid;
-       /* width: auto;
-       height: ; välj en så får den andra hänga med     
-                                /* yvop fixa styling för ikon-storlek  */
-    }    
 }
-                        /* navigation active page, marks acitve menu choice*/
-.nav-active {
-    font-weight: bold;
-    background-color: red;
-}
+
 
 /* ----- ?????????? ----- */ 

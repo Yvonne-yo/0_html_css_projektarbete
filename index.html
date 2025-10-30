@@ -13,11 +13,11 @@
 <body> 
     <header>        <!-- header ska vara samma på alla mina sidor -->
         <section class="hero-section">   <!-- create a hero section-->
-                <p>Välkommen till häst-kunskap</p>
+                <p>Häst-kunskap</p>
         </section>
-        <nav>                                       <!-- Navigationbar and hamburger menu -->
+        <nav>                                       <!-- Navigation and hamburger menu -->
             <ul>                                    <!-- always visible in navigation bar-->
-                <li><a href="index.html"><img src="./images/images__horse_icon_237x212.png" alt="Hem"></a> </li>
+                <li><a href="index.html"><img src="./images/images__horse_icon_237x212.png" alt="Hem" title="Hem"></a> </li>
             </ul>
                                                     <!-- hamburger menu -->
             <label for="menu" tabindex="0">
@@ -26,6 +26,7 @@
             <input id="menu" type="checkbox">       <!-- checkbox to keep track of if the hamburger menu is klicked or not -->
 
             <ul>                                    <!-- visible or not, collapsable menu part -->
+                <li><a href="index.html" class="nav-active">Hem</a></li>
                 <li><a href="anatomi.html">Anatomi</a></li>
                 <li><a href="about.html">Om oss</a></li>
                 <li><a href="contact.html">Kontakt</a></li>
@@ -43,8 +44,7 @@
             Här kommer det inledningvis finnas fakta om hästens anatomi.</p>
     </main>
 <hr>
-    <footer>
-        <a href="contact.html">Kontakta oss</a>    
+    <footer>   
         <p>Upphovsrätt&copy;2025 Häst-kunskap Alla rättigheter reserverade. </p>
     </footer>    
 </body>
