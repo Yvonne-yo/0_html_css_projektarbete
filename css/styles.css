@@ -28,7 +28,7 @@ body {
 
 /* ----- HERO ----------- */
 .hero-section{                  /* yvop fix styling, kolla både jättestor och lite skärm*/
-    background-image: url(./images/03-horse-genome-nationalgeographic_1241846_1600x900.webp);
+    background-image: url(../images/03-horse-genome-nationalgeographic_1241846_1600x900.webp);
     background-repeat: no-repeat;       /* values: repeat/no-reapeat/repeat-x/repeat-y */
 
     background-position: center center; /* [xpos ypos] values: left/right/top/center/bottom */
