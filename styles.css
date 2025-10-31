@@ -21,7 +21,7 @@ html {
 
 body {
     width: 100%;
-    max-width: 64rem;                   /* 64rem=1024px (64rem x 16px) */
+    max-width: 1024;
     margin: 0 auto;                     /* 0 for top and bottom, auto for left and right */
 
 }
@@ -93,13 +93,13 @@ nav img:hover{
     background-color: red;
 }
 
-@media (max-width: 1024px){
+@media only screen and (max-width: 1024px){
 nav {                       /* navigation on medium screens */
     background-color: lightblue;        /* change nav background color for max-width 1024 */
 }
 }
 
-@media (max-width: 640px){  /* navigation on small screens */
+@media only screen and (max-width: 640px){  /* navigation on small screens */
     nav {
         background-color: lightpink;     /* change nav background color for max-width 640 */
         flex-direction: row;
