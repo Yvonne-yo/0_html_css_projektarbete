@@ -12,5 +12,12 @@ Mobil-först-strategi med breakpoint 640px och 1024px och clamp() för responsit
 ### Lista över CSS-mönster som använts för interaktivitet
  
 ### Kända begränsningar och förbättringsidéer
+#### Lagring av bilder 
+Bilder bör egentligen inte ligga i git-repot, men jag har lagt dem här ändå för
+att paketera detta lilla projekt på ett ställe.
+#### Formulär
+Då detta projekt ej har någon server som svara på inskickat formulär, har jag lagt
+in en egen websida som svar till användaren.
+
 
 ### SLUT

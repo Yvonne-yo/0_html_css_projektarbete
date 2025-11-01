@@ -2,28 +2,29 @@
 /* ----- ?????????? ----- */    /* template divide parts of file */
 
 /* ----- GENERAL STYLING */
-html {
+:root {
+    max-width: 1024px;
+    margin: 0 auto;                     /* 0 for top and bottom, auto for left and right */
+    background-color: rgb(253,253,253); 
+    font-family: 'Times New Roman', Times, serif, sans-serif;
     font-size: 16px;
 
+    /* CSS variabels*/
+    --hero-text-color: white;
+    --hero-text-size: 2rem;
+
+    --nav-bg-color: lightblue;
+    --nav-item-color: darkblue;
+    --nav-item-hover: aqua;
+    --nav-item-active: red;
 }
-    h1 {                                
-        font-size: clamp(2rem, 2.5vw, 3rem);      /* yvop fix values*/
-    }
-    h2 {
-        font-size: clamp(1.5rem, 2.2vw, 2rem);    /* yvop fix values*/
-    }
-    h3 {
-        font-size: clamp(1.2rem, 1.5vw, 1.8rem);    /* yvop fix values*/
-    }
-    p {
-        font-size: clamp(1rem, 1.2vw, 1.5rem);      /* yvop fix values*/
-    }
 
-body {
-    width: 100%;
-    max-width: 1024;
-    margin: 0 auto;                     /* 0 for top and bottom, auto for left and right */
-
+/* ----- RESPONSIVE TEXT STYLING */
+main {
+    h1 {font-size: clamp(2rem, 2.5vw, 3rem);}
+    h2 {font-size: clamp(1.5rem, 2.2vw, 2rem);}
+    h3 {font-size: clamp(1.2rem, 1.5vw, 1.8rem);}
+    p  {font-size: clamp(1rem, 1.2vw, 1.2rem);}       
 }
 
 /* ----- HERO ----------- */
@@ -32,16 +33,15 @@ body {
     background-repeat: no-repeat;       /* values: repeat/no-reapeat/repeat-x/repeat-y */
 
     background-position: center center; /* [xpos ypos] values: left/right/top/center/bottom */
-    background-color: aqua;           /* setting background color visible for learning */
+    background-color: aqua;           /* yvop fix setting background color visible for learning */
     background-size: cover;             /* auto (original image size)/
                                            cover (resize to cover container, can stretch or cut to fit)/
                                            contain (resize to make sure image fully visible) */
-    
-    padding: 50px;                      /* padding: 50px;  */ 
-/*    color: white;                     /* text color on bg-img*/
-    font-size: 24px;                    /* */
-    font-weight: bold;                  /* */
-    text-align: center;                 /* */
+    padding: 60px;                      /* padding: 50px;  */ 
+    color: var(--hero-text-color);
+    font-size: var(--hero-text-size);
+    font-weight: bold;
+    text-align: center;
 }
 
 /* ----- NAVIGATION ----- */
@@ -53,17 +53,16 @@ parentrule {
 }                           */
 
 nav {                       /* navigation general settings */
-    background-color: greenyellow;
-/*    color: black; */
-    display: flex;
+    background-color: var(--nav-bg-color);
+    display: flex;          /* flexbox */
     justify-content: space-between;
 }
 nav ul {                    /* remove markers for items */
     list-style-type: none; 
 }
 nav ul li {                 /* menu items at single line */
-    display: inline-flex; 
-    margin: 0.3em 1 em;
+    display: inline-flex;   /* flexbox */
+    margin: 0.3em 1em;
 }
 nav input[type="checkbox"], /* invisible checkbox and label*/
 nav label {
@@ -71,39 +70,39 @@ nav label {
 }
 nav a {                     /* menu items (links) styling*/
     display: block;         /* to make padding work */
-    color: black;         /* link text color*/
+    color: var(--nav-item-color);         /* link text color black*/
     text-align: center;
-    padding: 14px 16px;
+    padding: 4px 6px;       /* padding: [top and bottom] [right and left] */
     text-decoration: none;  /* remove underlining */
 }
 nav a:hover{                /* yvop fix hover over menu item changes color*/
-    background-color: aqua;
-    color: white;
+    background-color: var(--nav-item-hover);
 }
 nav img {                   /* yvop fix hover over menu item changes color affects img too since it is a link*/
     border: none;
-    width:  20px;           /* yvop fixa styling för hästhuvud ikon-storlek  */
+    width:  20px;           /* styling för hästhuvud ikon-storlek  */
 }
-nav img:hover{
 
-}
 .nav-active {               /* class: navigation active page, marks acitve menu choice*/
     font-weight: bold;
     border: solid;
-    background-color: red;
+    background-color: var(--nav-item-active);
 }
 
-@media only screen and (max-width: 1024px){
-nav {                       /* navigation on medium screens */
-    background-color: lightblue;        /* change nav background color for max-width 1024 */
-}
+@media only screen and (max-width: 1024px ){     /* navigation on medium screens */
+    body {
+        margin: 0;
+    }
 }
 
-@media only screen and (max-width: 640px){  /* navigation on small screens */
+@media only screen and (max-width: 640px){      /* navigation on small screens */
+    body {
+        margin: 0;
+    }
+    
     nav {
-        background-color: lightpink;     /* change nav background color for max-width 640 */
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: row;                /* flexbox */
+        flex-wrap: wrap;  
         margin-left: 0;
         margin-right: 0;
     }
@@ -112,7 +111,7 @@ nav {                       /* navigation on medium screens */
     }
     nav ul:last-child {
         width: 100%;
-        flex-basis: 100%;
+        flex-basis: 100%;                   /* flexbox */
     }
     nav ul li {
         margin-bottom: 0;
@@ -122,7 +121,6 @@ nav {                       /* navigation on medium screens */
     }
 
     nav input[type="checkbox"]:not(:checked)+ul {
-        /* input[type="checkbox"]:not(:checked)+ul { */
     display:none;
     }
     nav label {
