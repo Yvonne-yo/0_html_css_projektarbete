@@ -17,6 +17,8 @@
     --nav-item-color: midnightblue;
     --nav-item-hover: white;
     --nav-item-active: skyblue;
+
+    --footer-text-color: midnightblue;
 }
 
 
@@ -137,7 +139,8 @@ nav img {                   /* yvop fix hover over menu item changes color affec
 }
 
 /* ----- FOOTER --------- */
-footer {                            
+footer {  
+    color: var(--footer-text-color);                         
     font-size: 0.8rem;
     padding: 1.5rem;
     background-image: linear-gradient(to right, lightblue, skyblue, blue);
