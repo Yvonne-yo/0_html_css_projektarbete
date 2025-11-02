@@ -14,9 +14,9 @@
     --hero-text-size: 2rem;
 
     --nav-bg-color: lightblue;
-    --nav-item-color: darkblue;
-    --nav-item-hover: aqua;
-    --nav-item-active: red;
+    --nav-item-color: midnightblue;
+    --nav-item-hover: white;
+    --nav-item-active: skyblue;
 }
 
 
@@ -84,7 +84,7 @@ nav a:hover{                /* yvop fix hover over menu item changes color*/
 }
 nav img {                   /* yvop fix hover over menu item changes color affects img too since it is a link*/
     border: none;
-    width:  20px;           /* yvop fix styling för hästhuvud ikon-storlek  */
+    width:  20px;
 }
 
 .nav-active{               /* mark active menu choice*/
