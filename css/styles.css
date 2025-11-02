@@ -4,12 +4,12 @@
 /* ----- GENERAL STYLING */
 :root {
     max-width: 1024px;
-    margin: 0 auto;                     /* 0 for top and bottom, auto for left and right */
+    margin: 0 auto;                                     /* [top and bottom] [left and right] */
     background-color: rgb(253,253,253); 
     font-family: 'Times New Roman', Times, serif, sans-serif;
     font-size: 16px;
 
-    /* CSS variabels*/
+    /* CSS variabels */
     --hero-text-color: white;
     --hero-text-size: 2rem;
 
@@ -19,38 +19,43 @@
     --nav-item-active: red;
 }
 
-/* ----- RESPONSIVE TEXT STYLING */
+
 main {
-    h1 {font-size: clamp(2rem, 2.5vw, 3rem);}
+    h1 {font-size: clamp(2rem, 2.5vw, 3rem);}           /* Responsive text styling */
     h2 {font-size: clamp(1.5rem, 2.2vw, 2rem);}
     h3 {font-size: clamp(1.2rem, 1.5vw, 1.8rem);}
-    p  {font-size: clamp(1rem, 1.2vw, 1.2rem);}       
+    p  {font-size: clamp(1rem, 1.2vw, 1.2rem);}  
 }
 
 /* ----- HERO ----------- */
-.hero-section{                  /* yvop fix styling, kolla både jättestor och lite skärm*/
+.hero-section{ 
     background-image: url(../images/03-horse-genome-nationalgeographic_1241846_1600x900.webp);
     background-repeat: no-repeat;       /* values: repeat/no-reapeat/repeat-x/repeat-y */
 
     background-position: center center; /* [xpos ypos] values: left/right/top/center/bottom */
-    background-color: aqua;           /* yvop fix setting background color visible for learning */
     background-size: cover;             /* auto (original image size)/
                                            cover (resize to cover container, can stretch or cut to fit)/
                                            contain (resize to make sure image fully visible) */
-    padding: 60px;                      /* padding: 50px;  */ 
+    padding: 100px; 
     color: var(--hero-text-color);
     font-size: var(--hero-text-size);
     font-weight: bold;
     text-align: center;
 }
 
-/* ----- NAVIGATION ----- */
+/* ----- NAVIGATION ----- */            /* yvop fix senare gör nesting eller ta bort kommentaren */
 /* nesting CSS syntax
 parentrule {
   css declarations;
   & childrule {
     css declarations;  } 
 }                           */
+.nav-sticky{
+    background-color: var(--nav-bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;       
+}
 
 nav {                       /* navigation general settings */
     background-color: var(--nav-bg-color);
@@ -65,14 +70,13 @@ nav ul li {                 /* menu items at single line */
     margin: 0.3em 1em;
 }
 nav input[type="checkbox"], /* invisible checkbox and label*/
-nav label {
-    display:none;
-}
+nav label {display:none;}
+
 nav a {                     /* menu items (links) styling*/
     display: block;         /* to make padding work */
-    color: var(--nav-item-color);         /* link text color black*/
+    color: var(--nav-item-color);         /* link text color*/
     text-align: center;
-    padding: 4px 6px;       /* padding: [top and bottom] [right and left] */
+    padding: 4px 6px;       /* padding: [top and bottom] [right and left] around the text */
     text-decoration: none;  /* remove underlining */
 }
 nav a:hover{                /* yvop fix hover over menu item changes color*/
@@ -80,10 +84,10 @@ nav a:hover{                /* yvop fix hover over menu item changes color*/
 }
 nav img {                   /* yvop fix hover over menu item changes color affects img too since it is a link*/
     border: none;
-    width:  20px;           /* styling för hästhuvud ikon-storlek  */
+    width:  20px;           /* yvop fix styling för hästhuvud ikon-storlek  */
 }
 
-.nav-active {               /* class: navigation active page, marks acitve menu choice*/
+.nav-active{               /* mark active menu choice*/
     font-weight: bold;
     border: solid;
     background-color: var(--nav-item-active);
@@ -102,7 +106,7 @@ nav img {                   /* yvop fix hover over menu item changes color affec
     
     nav {
         flex-direction: row;                /* flexbox */
-        flex-wrap: wrap;  
+        flex-wrap: wrap; 
         margin-left: 0;
         margin-right: 0;
     }
@@ -132,5 +136,13 @@ nav img {                   /* yvop fix hover over menu item changes color affec
     }
 }
 
+/* ----- FOOTER --------- */
+footer {                            
+    font-size: 0.8rem;
+    padding: 1.5rem;
+    background-image: linear-gradient(to right, lightblue, skyblue, blue);
+}
 
 /* ----- ?????????? ----- */ 
+
+
