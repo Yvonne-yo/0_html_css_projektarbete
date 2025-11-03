@@ -38,7 +38,7 @@ main {
     background-size: cover;             /* auto (original image size)/
                                            cover (resize to cover container, can stretch or cut to fit)/
                                            contain (resize to make sure image fully visible) */
-    padding: 100px; 
+    padding: 50px; 
     color: var(--hero-text-color);
     font-size: var(--hero-text-size);
     font-weight: bold;
