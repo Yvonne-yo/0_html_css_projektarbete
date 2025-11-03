@@ -11,38 +11,36 @@
 </head>
 
 <body>  
-    <header>        <!-- header ska vara samma på alla mina sidor -->
-        <section>   <!-- create a hero section-->
-
-        </section>
-        <nav>                                       <!-- Navigationbar and hamburger menu -->
-            <ul>                                    <!-- always visible in navigation bar-->
-                <li><a href="../index.html">Hem</a> </li>
-            </ul>
-                                                    <!-- hamburger menu -->
-            <label for="menu" tabindex="0">
-                &#9776;                             <!-- hamburger-ikon (UTF-8 symbol trigram for heaven) -->
-            </label>
-            <input id="menu" type="checkbox">       <!-- checkbox to keep track of if the hamburger menu is klicked or not -->
-
-            <ul>                                    <!-- visible or not, collapsable menu part -->
-                <li><a href="../pages/anatomi.html">Anatomi</a></li>
-                <li><a href="../pages/about.html" class="nav-active">Om oss</a></li>
-                <li><a href="../pages/contact.html">Kontakt</a></li>
-            </ul>
-        </nav>
+    <header class="hero-section">
+                <p>Häst-kunskap</p>
     </header>
-<hr>
+
+    <nav class="nav-sticky">                    <!-- Navigation and hamburger menu -->
+        <ul>                                    <!-- always visible menu part -->
+            <li><a href="../index.html"><img src="../images/images__horse_icon_237x212.png" alt="Hem" title="Hem"></a> </li>
+        </ul>
+                                                <!-- hamburger menu -->
+        <label for="menu" tabindex="0">&#9776;</label>  <!-- hamburger-ikon (UTF-8 symbol trigram for heaven) -->   
+        <input id="menu" type="checkbox">       <!-- checkbox to keep track of if the hamburger menu is klicked or not -->
+
+        <ul>                                    <!-- collapsable menu part -->
+            <li><a href="../index.html">Hem</a></li>
+            <li><a href="../pages/anatomi.html">Anatomi</a></li>
+            <li><a href="../pages/about.html" class="nav-active">Om oss</a></li>
+            <li><a href="../pages/contact.html">Kontakt</a></li>
+        </ul>
+    </nav>
+   
+    
+    <hr>
     <main>      
         <h2>Om oss</h2>
         <h3>Häst-kunskap samlad på en webbplats.</h3>
         <p>Den här webbplatsen har två syften. Det ena är att samla kunskap om 
             hästen och det andra att bygga en webbplats.</p>
-        <p>Detta är en webbplats som samlar kunskap om hästen. 
-            Här kommer det finnas fakta om hästens anatomi, hälsa och skötsel mm.</p>
+        <p>Här kommer det finnas fakta om hästen, t.ex. hästens anatomi, hälsa och skötsel.</p>
 
-        <p>Det är också en webbplats som ingår som ett projektarbete i utbildningen 
-            till fullstackutvecklare. Ett roligt sätt att lära sig grunderna i webbutveckling. 
+        <p>Det är också ett roligt sätt att lära sig grunderna i webbutveckling. 
             Allt du ser är skapat med HTML och CSS, helt utan JavaScript.</p>
 
 
