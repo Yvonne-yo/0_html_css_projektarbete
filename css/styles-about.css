@@ -3,48 +3,50 @@
 /* ----- ANIMATION ----- */
 @keyframes moveHorizontally {
     0% {
-        left: 0;
+        left: 0px;                        /* 0px */
         background-color: red;
     }    
     18% {
-        left: 50px;
+        left: 50px;                     /* 50px */
         background-color: orange;
     }
     34% {
-        left: 100px;
+        left: 100px;                    /* 100px */
         background-color: yellow;
     }
     50% {
-        left: 150px;
+        left: 150px;                    /* 150px */
         background-color: green;
     }
     66% {
-        left: 200px;
+        left: 200px;                    /* 200px */
         background-color: blue;
     }
     82% {
-        left: 250px;
+        left: 250px;                    /* 250px */
         background-color: indigo;
     }
     100% {
-        left: 300px;
+        left: 300px;                    /* 300px */
         background-color: violet;
     }
 }
 
 .animation-rainbow {
-    width: 50px;
-    height: 50px;
-    position: relative; 
+    width: 3rem;
+    height: 3rem;
+    position: relative;
     background-color: red;
-    border-radius: 100px;
+    border-radius: 3rem;
+    margin-left: 0.5rem;
     
     animation-name: moveHorizontally;       
     animation-duration: 3s;                 
     animation-timing-function: linear;     /* bestämmer hastighetskurvan för animationen. 
-                                            t.ex. ease-in = startar långsamt, sedan accelererar */
+                                            ease-in = startar långsamt, sedan accelererar 
+                                            linear = samma hastighet hela animationen */
     animation-delay: 1s;                   
-    animation-iteration-count: 30;           
+    animation-iteration-count: 30;  
 
     animation-direction: alternate;         /* direction anger om animationer ska spelas framåt, bakåt eller växla mellan de två. 
                                             alternate= animationen spelar framåt, sedan bakåt osv */
@@ -53,10 +55,10 @@
     animation-play-state: running;          /* running bestämmer om animationen är pausad eller spelas upp: paused eller running */
 }
 
-.p-rainbow {
-    max-width: 300px;
-    margin-left: 25px;                  
-    height: 1rem;
+.div-rainbow {                              /* rainbow line */
+    max-width: 300px;                        
+    margin-left: 25px;                                 
+    height: 2rem;
     background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
 }    
 
