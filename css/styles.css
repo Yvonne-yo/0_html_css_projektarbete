@@ -1,7 +1,7 @@
-/* CSS styles for Häst-kunskap*/
+/* CSS styles for Häst-kunskap */
 /* ----- ?????????? ----- */    /* template divide parts of file */
 
-/* ----- GENERAL STYLING */
+/* ----- GENERAL STYLING ----- */
 :root {
     max-width: 1024px;
     margin: 0 auto;                                     /* [top and bottom] [left and right] */
@@ -23,6 +23,7 @@
 
 
 main {
+    margin: 0 0.5rem;
     h1 {font-size: clamp(2rem, 2.5vw, 3rem);}           /* Responsive text styling */
     h2 {font-size: clamp(1.5rem, 2.2vw, 2rem);}
     h3 {font-size: clamp(1.2rem, 1.5vw, 1.8rem);}

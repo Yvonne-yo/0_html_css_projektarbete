@@ -1,0 +1,62 @@
+/* CSS styles for Häst-kunskap - Om oss (about.html) */
+
+/* ----- ANIMATION ----- */
+@keyframes moveHorizontally {
+    0% {
+        left: 0;
+        background-color: red;
+    }    
+    18% {
+        left: 50px;
+        background-color: orange;
+    }
+    34% {
+        left: 100px;
+        background-color: yellow;
+    }
+    50% {
+        left: 150px;
+        background-color: green;
+    }
+    66% {
+        left: 200px;
+        background-color: blue;
+    }
+    82% {
+        left: 250px;
+        background-color: indigo;
+    }
+    100% {
+        left: 300px;
+        background-color: violet;
+    }
+}
+
+.animation-rainbow {
+    width: 50px;
+    height: 50px;
+    position: relative; 
+    background-color: red;
+    border-radius: 100px;
+    
+    animation-name: moveHorizontally;       
+    animation-duration: 3s;                 
+    animation-timing-function: linear;     /* bestämmer hastighetskurvan för animationen. 
+                                            t.ex. ease-in = startar långsamt, sedan accelererar */
+    animation-delay: 1s;                   
+    animation-iteration-count: 4;           
+
+    animation-direction: alternate;         /* direction anger om animationer ska spelas framåt, bakåt eller växla mellan de två. 
+                                            alternate= animationen spelar framåt, sedan bakåt osv */
+    animation-fill-mode: forwards;          /* fill mode bestämmer hur elementet ska visas före och efter animationen. 
+                                            forwards= elementet behåller stilen från animationens sista nyckelram när den är klar */
+    animation-play-state: running;          /* running bestämmer om animationen är pausad eller spelas upp: paused eller running */
+}
+
+.p-rainbow {
+    max-width: 300px;
+    margin-left: 25px;                  
+    height: 1rem;
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+}    
+
