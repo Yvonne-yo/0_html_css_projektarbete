@@ -19,6 +19,7 @@
     --nav-item-active: skyblue;
 
     --footer-text-color: midnightblue;
+    --footer-link-color: midnightblue;
 }
 
 
@@ -145,6 +146,10 @@ footer {
     font-size: 0.8rem;
     padding: 1.5rem;
     background-image: linear-gradient(to right, lightblue, skyblue, blue);
+}
+
+footer p a{
+    color: var(--footer-link-color);   
 }
 
 /* ----- ?????????? ----- */ 
