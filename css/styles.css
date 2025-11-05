@@ -20,6 +20,10 @@
 
     --footer-text-color: midnightblue;
     --footer-link-color: midnightblue;
+
+    --form-button-color: lightblue;
+    --form-button-color-active: lightgreen;
+
 }
 
 
@@ -109,13 +113,13 @@ nav img {                   /* yvop fix hover over menu item changes color affec
     background-color: var(--nav-item-active);
 }
 
-@media only screen and (max-width: 1024px ){     /* navigation on medium screens */
+@media only screen and (max-width: 1024px ){     /* medium screens */
     body {
         margin: 0;
     }
 }
 
-@media only screen and (max-width: 640px){      /* navigation on small screens */
+@media only screen and (max-width: 640px){      /* small screens */
     body {
         margin: 0;
     }
@@ -141,14 +145,14 @@ nav img {                   /* yvop fix hover over menu item changes color affec
     }
 
     nav input[type="checkbox"]:not(:checked)+ul {
-    display:none;
+        display:none;
     }
     nav label {
-    text-align: right;
-    display: block;
-    padding: 0.5rem;
-    line-height: 1.6rem;
-    align-self: center;
+        text-align: right;
+        display: block;
+        padding: 0.5rem;
+        line-height: 1.6rem;
+        align-self: center;
     }
 }
 

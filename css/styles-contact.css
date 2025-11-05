@@ -22,13 +22,6 @@
 }
 /* -------------------------------------------------- */
 
-
-
-/* ----- FORM elements ----- */
-textarea {           
-    resize: none;       
-} 
-
 /* ----- FORM flexbox layout ----- */
 .flex-container-form { 
     display: flex;
@@ -136,5 +129,43 @@ textarea {
         margin: 10px 1px;
     }
 /*------------------------------------------*/
+
+/* ----- FORM elements ----- */
+
+textarea {           
+    resize: none;       
+} 
+
+textarea:focus {           
+    background-color: whitesmoke;       
+} 
+
+
+input[type=text]:focus,input[type=email]:focus {
+  background-color: whitesmoke;
+}
+
+
+/* transition */
+input[type=reset],[type=submit] {
+    background-color: var(--form-button-color);
+    padding: 8px;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0.1s;      
+}
+
+
+input[type=reset]:active,[type=submit]:active {
+    background-color: var(--form-button-color-active); 
+    font-weight: bold;  
+    width: 200px;   
+    cursor: pointer;
+}
+
+
+
+
 
 
