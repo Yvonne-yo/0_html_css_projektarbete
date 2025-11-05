@@ -31,6 +31,18 @@ main {
     p  {font-size: clamp(1rem, 1.2vw, 1.2rem);}  
 }
 
+
+@media (prefers-reduced-motion){            /* Inställning i OS stänger av animeringseffekter. */
+    * {                                     /* Testa i Chrome:                                 */
+    animation: none !important;             /* I chrome->inspektera->"tre punkter"->more tools->rendering */
+                                            /* i rendering-fliken -> "Emulate CSS media feature prefers-reduced-motion */
+  }                                         /* animation: förkortad version av alla animation-egenskaperna */
+                                            /* none: tar bort alla animationer  */
+                                            /* !important: ger högsta prio till avstängningen av animationer 
+                                                och överrider alla andra animationsregler i CSS */
+}
+
+
 /* ----- HERO ----------- */
 .hero-section{ 
     background-image: url(../images/03-horse-genome-nationalgeographic_1241846_1600x900.webp);
