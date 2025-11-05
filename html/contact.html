@@ -13,7 +13,7 @@
 
 <body> 
     <header class="hero-section">
-                <p>Häst-kunskap</p>
+        <p>Häst-kunskap</p>
     </header>
 
     <nav class="nav-sticky">                    <!-- Navigation and hamburger menu -->
@@ -22,7 +22,7 @@
         </ul>
                                                 <!-- hamburger menu -->
         <label for="menu" tabindex="0">&#9776;</label>  <!-- hamburger-ikon (UTF-8 symbol trigram for heaven) -->   
-        <input id="menu" type="checkbox">       <!-- checkbox to keep track of if the hamburger menu is klicked or not -->
+        <input id="menu" type="checkbox">       <!-- checkbox to keep track of if the hamburger menu is clicked or not -->
 
         <ul>                                    <!-- collapsable menu part -->
             <li><a href="../index.html">Hem</a></li>
@@ -31,44 +31,67 @@
             <li><a href="../html/contact.html" class="nav-active">Kontakt</a></li>
         </ul>
     </nav>
-   
-    
-    <hr>
-
+    <hr> 
     <main>      
         <h2>Kontakt</h2>
-        
         <p>Vänligen fyll i formuläret!</p>
-        <form action="../html/contact_response.html" method="post">
-            <label for="firstname">Förnamn:</label><br>
-            <input type="text" id="firstname" name="firstname" required autofocus placeholder="Förnamn"><br><br>
 
-            <label for="lastname">Efternamn:</label><br>
-            <input type="text" id="lastname" name="lastname" placeholder="Efternamn"><br><br>
+        <form class="flex-container-form"    action="../html/contact_response.html" method="post">
 
-            <label for="email-address">E-post:</label><br>
-            <input type="email" id="email-address" name="email-address" required placeholder="namn@outlook.com"><br><br>
+            <div class="flex-container-1">
+                <div class="flex-container-1-1">
+                    <label for="firstname">Förnamn:</label>
+                    <input type="text" id="firstname" name="firstname" required autofocus placeholder="Förnamn">
+                </div>
 
-            <label for="message-type">Typ av meddelande</label><br><br>
-                <input type="radio" id="question" name="message-type" value="question">
-                <label for="question">Fråga</label>
+                <div class="flex-container-1-1">
+                    <label for="lastname">Efternamn:</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Efternamn">
+                </div>
 
-                <input type="radio" id="suggestion" name="message-type" value="suggestion">
-                <label for="suggestion">Önskemål om häst-fakta</label>
+                <div class="flex-container-1-1">
+                    <label for="email-address">Epost:</label>
+                    <input type="email" id="email-address" name="email-address" required placeholder="namn@gmail.com">
+                </div>
+            </div>
+              
+            <div class="flex-container-2">    
+                <div class=flex-container-2-1>         
+                    <div class="flex-container-2-1-1">
+                        <label for="message-type">Typ av meddelande</label>
+                    </div>
+                </div>
+                <div class="flex-container-2-1">
+                    <div class="flex-container-2-1-1">
+                        <input type="radio" id="question" name="message-type" value="question">
+                        <label for="question">Fråga</label>
+                    </div>
+                    <div class="flex-container-2-1-1">
+                        <input type="radio" id="suggestion" name="message-type" value="suggestion">
+                        <label for="suggestion">Önskemål om häst-fakta</label>
+                    </div>
+                    <div class="flex-container-2-1-1">
+                        <input type="radio" id="other" name="message-type" value="other">
+                        <label for="other">Annat</label>
+                    </div>
+                </div>
+            </div>
 
-                <input type="radio" id="other" name="message-type" value="other">
-                <label for="other">Annat</label><br><br>
-
-            <label for="message">Meddelande:</label><br>
-            <textarea id="message" name="message" rows="5" cols="50" maxlenght="1000"></textarea><br><br>
-
-            <input type="reset" value="Återställ"><br><br>
-            <input type="submit" value="Sänd">
-            <br><br>
-        </form>
-
+            <div class="flex-container-3">              
+                <label for="message">Meddelande:</label> 
+                <textarea id="message" name="message" rows="5" cols="40" maxlenght="1000"
+                        rezise="none"                                                       
+                        placeholder="Skriv ditt meddelande här!"></textarea>
+            </div>
+        
+            <div class="flex-container-4">
+                <input type="reset" value="Återställ">
+                <input type="submit" value="Sänd">    
+            </div>          
+        </form>        
+        
     </main>
-<hr>
+    <hr>
     <footer>  
         <p>Upphovsrätt&copy;2025 Häst-kunskap Alla rättigheter reserverade. </p>
     </footer>    

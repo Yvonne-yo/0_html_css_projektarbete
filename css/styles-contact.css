@@ -1,1 +1,140 @@
 /* CSS styles for Häst-kunskap - Kontakt (contact.html) */
+
+/* flexbox container and item templates with default values set */
+.container {
+     display: flex;                 /* flex inline-flex*/
+     flex-direction: row;           /* row column row-reverse column-reverse */
+     flex-wrap: nowrap;             /* nowrap wrap wrap-reverse */
+     flex-flow: row nowrap;         /* [flex-direction] [flex-wrap] */
+     justify-content: flex-start;   /* center flex-start flex-end space-around space-between space-evenly */
+     align-items: normal;           /* center flex-start flex-end stretch baseline normal */
+     align-content: stretch;        /* center stretch flex-start flex-end space-around space-between sapce-evenly */ 
+}
+.item {
+    order: 0;                       /* display order inside the flex container */ 
+    flex-grow: 0;                   /* flex item grows relative the rest of flex items in the container */
+    flex-shrink: 1;                 /* flex item shrinks relative the rest of flex items in the container */    
+    flex-basis: 200;                /* initial length, here: 200px */
+    flex: 1 0 150px;                /* [flex-grow] [flex-shrink] [flex-basis], here: 1 0 150px */
+    align-self: center;             /* align-self overrides the container "align-items" 
+                                    /* so default is the [containers align-items] */
+                                    /* center flex-start flex-end stretch baseline normal */
+}
+/* -------------------------------------------------- */
+
+
+
+/* ----- FORM elements ----- */
+textarea {           
+    resize: none;       
+} 
+
+/* ----- FORM flexbox layout ----- */
+.flex-container-form { 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end; 
+    align-items: normal;
+    align-content: stretch;
+/*    background-color: blue;   */
+    width: fit-content;
+    gap: 1px;
+    padding: 1px;
+    margin: 1px;
+}
+
+/*------------------------------------------*/
+    .flex-container-1 {                 
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: normal;
+        align-content: stretch;
+/*      background-color: yellow; */   
+        gap: 1px;
+        padding: 1px;
+        margin: 1px;  
+    }
+        .flex-container-1-1 { 
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;    
+            align-items: normal;
+            align-content: stretch;
+/*          background-color: aquamarine; */
+            gap: 1px;
+            padding: 5px;
+            margin: 1px;
+        }
+
+/*------------------------------------------*/
+    .flex-container-2 { 
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: normal;
+        align-content: stretch;
+/*      background-color: coral;  */    
+        gap: 1px;
+        padding: 1px;
+        margin: 1px;
+    }
+        .flex-container-2-1 { 
+            display: flex;                      
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;    
+            align-items: normal;
+            align-content: stretch;
+/*          background-color: yellow; */
+            gap: 1px;
+            padding: 1px;
+            margin: 1px;
+        }
+            .flex-container-2-1-1 { 
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-start;    
+                align-items: normal;
+                align-content: stretch;
+/*              background-color: aquamarine; */
+                gap: 1px;
+                padding: 5px;
+                margin: 1px;
+            }
+
+/*------------------------------------------*/
+    .flex-container-3 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;    
+        align-items: normal;
+        align-content: stretch;
+/*      background-color: aquamarine; */    
+        gap: 1px;
+        padding: 5px;
+        margin: 10px 1px;
+    }
+
+/*------------------------------------------*/
+    .flex-container-4 { 
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: normal;
+        align-content: stretch;
+/*      background-color: aquamarine; */                                          
+        gap: 1px;
+        padding: 10px;
+        margin: 10px 1px;
+    }
+/*------------------------------------------*/
+
+
