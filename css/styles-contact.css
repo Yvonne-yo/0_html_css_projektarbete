@@ -14,7 +14,7 @@
     order: 0;                       /* display order inside the flex container */ 
     flex-grow: 0;                   /* flex item grows relative the rest of flex items in the container */
     flex-shrink: 1;                 /* flex item shrinks relative the rest of flex items in the container */    
-    flex-basis: 200;                /* initial length, here: 200px */
+    flex-basis: 200px;                /* initial length, here: 200px */
     flex: 1 0 150px;                /* [flex-grow] [flex-shrink] [flex-basis], here: 1 0 150px */
     align-self: center;             /* align-self overrides the container "align-items" 
                                     /* so default is the [containers align-items] */
@@ -48,6 +48,7 @@
 /*      background-color: yellow; */   
         gap: 1px;
         padding: 1px;
+        margin: 1px;
         margin: 1px;  
     }
         .flex-container-1-1 { 
@@ -97,7 +98,7 @@
                 align-content: stretch;
 /*              background-color: aquamarine; */
                 gap: 1px;
-                padding: 5px;
+                padding: 1px;
                 margin: 1px;
             }
 
@@ -164,7 +165,9 @@ input[type=reset]:active,[type=submit]:active {
     cursor: pointer;
 }
 
-
+form p{
+    margin: 10px 0px 0px 0px;
+}
 
 
 

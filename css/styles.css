@@ -26,14 +26,12 @@
 
 }
 
+                                            /* Responsive text styling */
+h1 {font-size: clamp(2rem, 2.5vw, 3rem);}          
+h2 {font-size: clamp(1.5rem, 2.2vw, 2rem);}
+h3 {font-size: clamp(1.2rem, 1.5vw, 1.8rem);}
+p  {font-size: clamp(1rem, 1.2vw, 1.2rem);}  
 
-main {
-    margin: 0 0.5rem;
-    h1 {font-size: clamp(2rem, 2.5vw, 3rem);}           /* Responsive text styling */
-    h2 {font-size: clamp(1.5rem, 2.2vw, 2rem);}
-    h3 {font-size: clamp(1.2rem, 1.5vw, 1.8rem);}
-    p  {font-size: clamp(1rem, 1.2vw, 1.2rem);}  
-}
 
 
 @media (prefers-reduced-motion){            /* Inställning i OS stänger av animeringseffekter. */
@@ -160,7 +158,7 @@ nav img {                   /* yvop fix hover over menu item changes color affec
 footer {  
     color: var(--footer-text-color);                         
     font-size: 0.8rem;
-    padding: 1.5rem;
+    padding: 1rem;
     background-image: linear-gradient(to right, lightblue, skyblue, blue);
 }
 
