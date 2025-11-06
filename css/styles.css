@@ -24,6 +24,9 @@
     --form-button-color: lightblue;
     --form-button-color-active: lightgreen;
 
+    --about-button-bg-color: lightblue;
+    --about-button-text-color: midnightblue;
+
 }
 
                                             /* Responsive text styling */
@@ -32,7 +35,9 @@ h2 {font-size: clamp(1.5rem, 2.2vw, 2rem);}
 h3 {font-size: clamp(1.2rem, 1.5vw, 1.8rem);}
 p  {font-size: clamp(1rem, 1.2vw, 1.2rem);}  
 
-
+main {
+        margin: 1rem;
+}
 
 @media (prefers-reduced-motion){            /* Inställning i OS stänger av animeringseffekter. */
     * {                                     /* Testa i Chrome:                                 */
@@ -112,8 +117,8 @@ nav img {                   /* yvop fix hover over menu item changes color affec
 }
 
 @media only screen and (max-width: 1024px ){     /* medium screens */
-    body {
-        margin: 0;
+    main {
+        margin: 1rem;
     }
 }
 
@@ -121,7 +126,9 @@ nav img {                   /* yvop fix hover over menu item changes color affec
     body {
         margin: 0;
     }
-    
+    main {
+        margin: 0.1rem;
+    }
     nav {
         flex-direction: row;                /* flexbox */
         flex-wrap: wrap; 

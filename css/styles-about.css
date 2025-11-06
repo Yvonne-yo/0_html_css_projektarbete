@@ -1,5 +1,71 @@
 /* CSS styles for Häst-kunskap - Om oss (about.html) */
 
+
+/* ----- MODAL ----- */
+.link-to-modal {
+    background-color: var(--about-button-bg-color);
+    color:var(--about-button-text-color);
+    text-decoration: none;
+    text-align: center;
+    padding: 6px 20px;
+    border: solid 1px;
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+.image-in-modal {
+    width: 50%;
+    max-width: 500px;
+}
+
+.modal-wrapper{
+    position: fixed;        /* fixed */
+    top: 0;                 /* top=0 */
+    left: 0;                /* left=0 */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;                 /* opacity=0 completely transparent */
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 2000;              /* navbar has z-index=1000 */ 
+}
+
+.modal-wrapper:target {
+    opacity: 1;                 /* opacity=1 not transparent at all  */
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; /* Centrera vertikalt */
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.close-button {
+    /* Alternative position of the close X                          */
+    /* close X in top right corner of html page behind the modal    */
+    /* position: absolute;                                          */
+    /* top: 10px;                                                   */
+    /* right: 10px;                                                 */
+    float: right;       /* close X in top right corner of the modal */
+    font-size: 20px;
+    text-decoration: none;
+    color: black;               /* #333; */
+    background-color: yellow;
+    border: solid 2px black;
+    padding: 10px;
+}
+
+
+
+
+
 /* ----- ANIMATION ----- */
 @keyframes moveHorizontally {
     0% {
