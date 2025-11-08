@@ -105,10 +105,10 @@ nav a {                     /* menu items (links) styling*/
     padding: 4px 6px;       /* padding: [top and bottom] [right and left] around the text */
     text-decoration: none;  /* remove underlining */
 }
-nav a:hover{                /* yvop fix hover over menu item changes color*/
+nav a:hover{                /* hover over menu item changes color*/
     background-color: var(--nav-item-hover);
 }
-nav img {                   /* yvop fix hover over menu item changes color affects img too since it is a link*/
+nav img {                   /* hover over menu item changes color affects img too since it is a link*/
     border: none;
     width:  20px;
 }

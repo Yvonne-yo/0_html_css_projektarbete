@@ -1,0 +1,20 @@
+/* CSS styles for Häst-kunskap - main (index.html) */
+/* ----- ?????????? ----- */    /* template divide parts of file */
+
+/* ----- IMAGE GALLERY ----- */
+
+.horse-gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.horse-gallery-item {       /* horse jpg 640x960 */
+    margin: 5px;  
+    width: 234px;  
+}
+.horse-gallery-item img {
+    width: 100%;
+    height: auto;
+    border: solid 2px midnightblue;
+}
