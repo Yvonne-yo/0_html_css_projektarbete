@@ -1,5 +1,6 @@
 /* CSS styles for Häst-kunskap - Kontakt (contact.html) */
 
+/* ----- TEMPLATE ----- */
 /* flexbox container and item templates with default values set */
 .container {
      display: flex;                 /* flex inline-flex*/
@@ -21,6 +22,9 @@
                                     /* center flex-start flex-end stretch baseline normal */
 }
 /* -------------------------------------------------- */
+
+/* Template container and item can be removed      */
+/* Properties set to default values can be removed */
 
 /* ----- FORM flexbox layout ----- */
 .flex-container-form { 

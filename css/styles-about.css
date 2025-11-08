@@ -3,14 +3,15 @@
 
 /* ----- MODAL ----- */
 .link-to-modal {
-    background-color: var(--about-button-bg-color);
     color:var(--about-button-text-color);
     text-decoration: none;
-    text-align: center;
-    padding: 6px 20px;
-    border: solid 1px;
-    border-radius: 5px; 
+    padding: 6px 10px;
     cursor: pointer;
+    /* Link style like a button possible, but not recommended */
+    /* background-color: var(--about-button-bg-color); */
+    /* text-align: center; */
+    /* border: solid 1px; */
+    /* border-radius: 5px;  */
 }
 
 .image-in-modal {
@@ -19,7 +20,7 @@
 }
 
 .modal-wrapper{
-    position: fixed;        /* fixed */
+    position: fixed;        /* fixed= positioned relative to viewport, stays in the same position even when page is scrolled */
     top: 0;                 /* top=0 */
     left: 0;                /* left=0 */
     width: 100%;
@@ -38,10 +39,10 @@
 
 .modal-content {
     background-color: #fff;
-    margin: 15% auto; /* Centrera vertikalt */
+    margin: 15% auto;           /* [top bottom] [left right] */
     padding: 20px;
-    width: 80%;
-    max-width: 500px;
+    width: 100%;
+    max-width: 300px;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
@@ -53,18 +54,16 @@
     /* position: absolute;                                          */
     /* top: 10px;                                                   */
     /* right: 10px;                                                 */
-    float: right;       /* close X in top right corner of the modal */
+    position: relative;     /* relativer= positioned relative to its normal position */
+    top: 0;
+    left: 95%;
     font-size: 20px;
+    font-weight: bold;
     text-decoration: none;
-    color: black;               /* #333; */
-    background-color: yellow;
-    border: solid 2px black;
-    padding: 10px;
+    color: var(--close-modal-cross-color);               
+    background-color: var(--close-modal-cross-bg-color);
+    border: solid 2px var(--close-modal-cross-color);  
 }
-
-
-
-
 
 /* ----- ANIMATION ----- */
 @keyframes moveHorizontally {
