@@ -58,3 +58,15 @@ html {
         width: 256px;
     }
 }
+
+.horse-gaits a {
+   color: var(---caroulsel-color); 
+   padding: 20px;
+}
+
+/* ----- Hästens gångarter details/summary ----- */
+summary {
+    color: var(--summary-color);
+    background-color: var(--summary-bg-color);
+    margin: 0.5rem 0;
+}
