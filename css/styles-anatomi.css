@@ -64,9 +64,207 @@ html {
    padding: 20px;
 }
 
-/* ----- Hästens gångarter details/summary ----- */
+/* ----- Horse gaits details/summary ----- */
 summary {
     color: var(--summary-color);
     background-color: var(--summary-bg-color);
     margin: 0.5rem 0;
 }
+
+/* ----- Horse body parts ----- */
+.horse-body-parts img {             
+    width: 100%;
+    max-width: 500px;
+
+}
+
+.horse-body-parts-grid-container{            /* grid container, the parent */
+    /* background-color: olive;  */
+    padding: 10px;                      
+    display: grid;
+
+    grid-template-columns:  40px 150px 40px 150px 40px 150px 40px 150px; /* 8 cols */
+    grid-template-rows:     auto auto auto auto auto auto auto auto; /* 8 rows */
+                        /* grid-template-areas: how to display columns and rows, using named grid items */
+    grid-template-areas:
+        "no-1   part-1  no-9    part-9      no-16   part-16  no-24  part-24" 
+        "no-2   part-2  no-10   part-10     no-17   part-17  no-25  part-25"
+        "no-3   part-3  no-11   part-11     no-18   part-18  no-26  part-26"
+        "no-4   part-4  no-12   part-12     no-19   part-19  no-27  part-27"
+        "no-5   part-5  no-13a  part-13a    no-20   part-20  no-28  part-28"
+        "no-6   part-6  no-13b  part-13b    no-21   part-21  no-29  part-29"
+        "no-7   part-7  no-14   part-14     no-22   part-22  no-30  part-30"
+        "no-8   part-8  no-15   part-15     no-23   part-23  no-31  part-31";
+     
+    justify-content: start;         /* total grid within the container */
+    align-content: start;           /* total grid within the container */
+
+    justify-items: center;          /* item content within the cell */
+    align-items: center;            /* item content within the cell */
+
+    grid-column-gap: 6px;            /* space between columns */
+    grid-row-gap: 6px;               /* space between rows */   
+}
+
+                        
+.grid-item {                        /* grid item, all the children */
+    /* background-color: lightgoldenrodyellow; */   
+    color: var(--grid-item-text-color);
+    font-size: 1rem;
+}
+
+.no {                               /* grid item type number */
+    background-color: var(--grid-item-no-bg-color);
+    padding: 10px;
+    margin: 0px;
+}
+
+.part {                             /* grid item type horse body part */
+    /* background-color: lightpink; */
+    width: 150px;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Assign names to all grid-items, reference by their name in the grid-template-area declaration */
+.no-1 {grid-area: no-1;}
+.no-2 {grid-area: no-2;}
+.no-3 {grid-area: no-3;}
+.no-4 {grid-area: no-4;}
+.no-5 {grid-area: no-5;}
+.no-6 {grid-area: no-6;}
+.no-7 {grid-area: no-7;}
+.no-8 {grid-area: no-8;}
+.no-9 {grid-area: no-9;}
+.no-10 {grid-area: no-10;}
+.no-11 {grid-area: no-11;}
+.no-12 {grid-area: no-12;}
+.no-13a {grid-area: no-13a;}
+.no-13b {grid-area: no-13b;}
+.no-14 {grid-area: no-14;}
+.no-15 {grid-area: no-15;}
+.no-16 {grid-area: no-16;}
+.no-17 {grid-area: no-17;}
+.no-18 {grid-area: no-18;}
+.no-19 {grid-area: no-19;}
+.no-20 {grid-area: no-20;}
+.no-21 {grid-area: no-21;}
+.no-22 {grid-area: no-22;}
+.no-23 {grid-area: no-23;}
+.no-24 {grid-area: no-24;}
+.no-25 {grid-area: no-25;}
+.no-26 {grid-area: no-26;}
+.no-27 {grid-area: no-27;}
+.no-28 {grid-area: no-28;}
+.no-29 {grid-area: no-29;}
+.no-30 {grid-area: no-30;}
+.no-31 {grid-area: no-31;}
+
+
+.part-1 {grid-area: part-1;}
+.part-2 {grid-area: part-2;}
+.part-3 {grid-area: part-3;} 
+.part-4 {grid-area: part-4;}
+.part-5 {grid-area: part-5;}
+.part-6 {grid-area: part-6;}
+.part-7 {grid-area: part-7;}
+.part-8 {grid-area: part-8;}
+.part-9 {grid-area: part-9;}
+.part-10 {grid-area: part-10;}
+.part-11 {grid-area: part-11;}
+.part-12 {grid-area: part-12;}
+.part-13a {grid-area: part-13a;}
+.part-13b {grid-area: part-13b;}
+.part-14 {grid-area: part-14;}
+.part-15 {grid-area: part-15;}
+.part-16 {grid-area: part-16;}
+.part-17 {grid-area: part-17;}
+.part-18 {grid-area: part-18;}
+.part-19 {grid-area: part-19;}
+.part-20 {grid-area: part-20;}
+.part-21 {grid-area: part-21;}
+.part-22 {grid-area: part-22;}
+.part-23 {grid-area: part-23;}
+.part-24 {grid-area: part-24;}
+.part-25 {grid-area: part-25;}
+.part-26 {grid-area: part-26;}
+.part-27 {grid-area: part-27;}
+.part-28 {grid-area: part-28;}
+.part-29 {grid-area: part-29;}
+.part-30 {grid-area: part-30;}
+.part-31 {grid-area: part-31;}
+
+
+@media only screen and (max-width: 800px ){     /* medium screens */
+    main {
+        margin: 1rem;
+    }    
+    
+    .horse-body-parts-grid-container {            /* grid container, the parent */  
+        grid-template-columns:  40px 150px 40px 150px; /* 4 cols */
+        grid-template-rows:     repeat(16 auto);       /* 16 rows */
+                           /* grid-template-areas: how to display columns and rows, using named grid items */
+        grid-template-areas:
+            "no-1   part-1   no-16   part-16"  
+            "no-2   part-2   no-17   part-17"  
+            "no-3   part-3   no-18   part-18"  
+            "no-4   part-4   no-19   part-19"       
+            "no-5   part-5   no-20   part-20"    
+            "no-6   part-6   no-21   part-21"  
+            "no-7   part-7   no-22   part-22"  
+            "no-8   part-8   no-23   part-23"  
+            "no-9   part-9   no-24   part-24"       
+            "no-10  part-10  no-25   part-25"   
+            "no-11  part-11  no-26   part-26"  
+            "no-12  part-12  no-27   part-27"  
+            "no-13a part-13a no-28   part-28"  
+            "no-13b part-13b no-29   part-29"       
+            "no-14  part-14  no-30   part-30" 
+            "no-15  part-15  no-31   part-31"; 
+    }
+}
+
+
+@media only screen and (max-width: 640px){      /* small screens */
+
+    .horse-body-parts-grid-container {            /* grid container, the parent */    
+        grid-template-columns:  40px 150px; /* 2 cols */
+        grid-template-rows:     repeat(31 auto); /* 31 rows */
+                            /* grid-template-areas: how to display columns and rows, using named grid items */
+        grid-template-areas:
+            "no-1   part-1"  
+            "no-2   part-2"  
+            "no-3   part-3"  
+            "no-4   part-4"  
+            "no-5   part-5"  
+            "no-6   part-6"  
+            "no-7   part-7"  
+            "no-8   part-8"  
+            "no-9   part-9"      
+            "no-10  part-10"  
+            "no-11  part-11"
+            "no-12  part-12"
+            "no-13a  part-13a"
+            "no-13b  part-13b"
+            "no-14  part-14"
+            "no-15  part-15"
+            "no-16  part-16"
+            "no-17  part-17"
+            "no-18  part-18"
+            "no-19  part-19"
+            "no-20  part-20"
+            "no-21  part-21"
+            "no-22  part-22"
+            "no-23  part-23"
+            "no-24  part-24"
+            "no-25  part-25"
+            "no-26  part-26"
+            "no-27  part-27"
+            "no-28  part-28"
+            "no-29  part-29"
+            "no-30  part-30"
+            "no-31  part-31";
+
+    }
+}
+/* ------------------------------- */

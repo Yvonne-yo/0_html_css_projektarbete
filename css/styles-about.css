@@ -8,10 +8,10 @@
     padding: 6px 10px;
     cursor: pointer;
     /* Link style like a button possible, but not recommended */
-    /* background-color: var(--about-button-bg-color); */
-    /* text-align: center; */
-    /* border: solid 1px; */
-    /* border-radius: 5px;  */
+        /* background-color: var(--about-button-bg-color); */
+        /* text-align: center; */
+        /* border: solid 1px; */
+        /* border-radius: 5px;  */
 }
 
 .image-in-modal {
@@ -20,26 +20,27 @@
 }
 
 .modal-wrapper{
-    position: fixed;        /* fixed= positioned relative to viewport, stays in the same position even when page is scrolled */
-    top: 0;                 /* top=0 */
-    left: 0;                /* left=0 */
+    position: fixed;        /* fixed= positioned relative to viewport, 
+                               stays in the same position even when page is scrolled */
+    top: 0;                 
+    left: 0;                
     width: 100%;
     height: 100%;
     background-color: var(--modal-bg-color); /* html page grayed out half transparent behind the modal */
-    opacity: 0;                 /* opacity=0 completely transparent */
+    opacity: 0;                              /* opacity=0 completely transparent */
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
-    z-index: 2000;              /* navbar has z-index=1000 */ 
+    z-index: 2000;                          /* navbar has z-index=1000 */ 
 }
 
 .modal-wrapper:target {
-    opacity: 1;                 /* opacity=1 not transparent at all  */
+    opacity: 1;                             /* opacity=1 not transparent at all  */
     visibility: visible;
 }
 
 .modal-content {
     background-color: #fff;
-    margin: 15% auto;           /* [top bottom] [left right] */
+    margin: 15% auto;                       /* [top bottom] [left right] */
     padding: 20px;
     width: 100%;
     max-width: 300px;
@@ -51,10 +52,10 @@
 .close-button {
     /* Alternative position of the close X                          */
     /* close X in top right corner of html page behind the modal    */
-    /* position: absolute;                                          */
-    /* top: 10px;                                                   */
-    /* right: 10px;                                                 */
-    position: relative;     /* relativer= positioned relative to its normal position */
+        /* position: absolute;                                      */
+        /* top: 10px;                                               */
+        /* right: 10px;                                             */
+    position: relative;     /* relative= positioned relative to its normal position */
     top: 0;
     left: 95%;
     font-size: 20px;
@@ -68,31 +69,31 @@
 /* ----- ANIMATION ----- */
 @keyframes moveHorizontally {
     0% {
-        left: 0px;                        /* 0px */
+        left: 0px;                      
         background-color: red;
     }    
     18% {
-        left: 50px;                     /* 50px */
+        left: 50px;                     
         background-color: orange;
     }
     34% {
-        left: 100px;                    /* 100px */
+        left: 100px;                    
         background-color: yellow;
     }
     50% {
-        left: 150px;                    /* 150px */
+        left: 150px;                    
         background-color: green;
     }
     66% {
-        left: 200px;                    /* 200px */
+        left: 200px;                    
         background-color: blue;
     }
     82% {
-        left: 250px;                    /* 250px */
+        left: 250px;                   
         background-color: indigo;
     }
     100% {
-        left: 300px;                    /* 300px */
+        left: 300px;                    
         background-color: violet;
     }
 }
@@ -107,16 +108,14 @@
     
     animation-name: moveHorizontally;       
     animation-duration: 3s;                 
-    animation-timing-function: linear;     /* bestämmer hastighetskurvan för animationen. 
-                                            ease-in = startar långsamt, sedan accelererar 
-                                            linear = samma hastighet hela animationen */
+    animation-timing-function: linear;     /* ease-in = startar långsamt, sedan accelererar 
+                                              linear = samma hastighet hela animationen */
     animation-delay: 1s;                   
     animation-iteration-count: 30;  
 
-    animation-direction: alternate;         /* direction anger om animationer ska spelas framåt, bakåt eller växla mellan de två. 
-                                            alternate= animationen spelar framåt, sedan bakåt osv */
+    animation-direction: alternate;         /* alternate= animationen spelar framåt, sedan bakåt osv */
     animation-fill-mode: forwards;          /* fill mode bestämmer hur elementet ska visas före och efter animationen. 
-                                            forwards= elementet behåller stilen från animationens sista nyckelram när den är klar */
+                                               forwards= elementet behåller stilen från animationens sista keyframe när den är klar */
     animation-play-state: running;          /* running bestämmer om animationen är pausad eller spelas upp: paused eller running */
 }
 
