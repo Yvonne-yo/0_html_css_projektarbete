@@ -1,5 +1,4 @@
 /* CSS styles for Häst-kunskap - main (index.html) */
-/* ----- ?????????? ----- */    /* template divide parts of file */
 
 /* ----- IMAGE GALLERY ----- */
 
@@ -8,8 +7,7 @@
     flex-wrap: wrap;
 }
 
-
-.horse-gallery-item {       /* horse jpg 640x960 */
+.horse-gallery-item { 
     margin: 5px;  
     width: 234px;  
 }

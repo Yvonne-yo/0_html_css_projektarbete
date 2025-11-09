@@ -1,0 +1,60 @@
+/* CSS styles for Häst-kunskap - Anatomi (anatomi.html */
+
+/* ----- HORSE GAITS CAROUSEL ----- */
+
+ .horse-gaits-carousel {
+    display: flex;                  /* flexbox default direction=row so overflow content is horizontal */
+    overflow-x: scroll;             /* horizontal scrollbars are added */ 
+    scroll-snap-type: x mandatory;  /* scroll-snap-type= How to snap into focus at scroll stop  */
+                                    /* x = scroll snap on x-axis */
+                                    /* mandatory = scroll will automatically move to snap point after scroll action is finished*/
+    width: 100%;
+    max-width: 600px;
+ } 
+            
+ .horse-gaits-carousel-item {
+    scroll-snap-align: start;       /* scroll-snap-align= Where to snap into focus at scroll stop */
+    flex: 0 0 100%;                 /* flex-basis = sets initial length of the item [flex-grow] [flex-shrink] [flex-basis]*/
+    height: 100%;
+    scroll-margin-left: 0px;           
+
+ }
+
+.horse-gaits-carousel-item img {
+    width: 512px;
+    /* border: solid 2px midnightblue; */
+}
+
+html {
+    scroll-behavior: smooth;                    /* for a smooth scrolling effect */
+}
+
+@media only screen and (max-width: 1024px ){     /* medium screens */
+    main {
+        margin: 1rem;
+    }
+
+    .horse-gaits-carousel {
+        width: 100%;
+    } 
+
+    .horse-gaits-carousel-item img {
+        width: 512px;
+    }
+}
+
+
+@media only screen and (max-width: 640px){      /* small screens */
+    main {
+        margin: 1rem;
+    }
+
+    .horse-gaits-carousel {
+        width: 100%;
+        max-width: 300px;
+    } 
+
+    .horse-gaits-carousel-item img {
+        width: 256px;
+    }
+}

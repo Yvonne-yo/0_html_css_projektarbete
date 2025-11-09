@@ -1,5 +1,4 @@
 /* CSS styles for Häst-kunskap */
-/* ----- ?????????? ----- */    /* template divide parts of file */
 
 /* ----- GENERAL STYLING ----- */
 :root {
@@ -69,7 +68,7 @@ main {
     text-align: center;
 }
 
-/* ----- NAVIGATION ----- */            /* yvop fix senare gör nesting eller ta bort kommentaren */
+/* ----- NAVIGATION ----- */            /* It is possible to change syntax into nesting. */
 /* nesting CSS syntax
 parentrule {
   css declarations;
@@ -176,6 +175,6 @@ footer p a{
     color: var(--footer-link-color);   
 }
 
-/* ----- ?????????? ----- */ 
+/* ---------------------- */ 
 
 
