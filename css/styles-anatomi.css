@@ -60,7 +60,7 @@ html {
 }
 
 .horse-gaits a {
-   color: var(---caroulsel-color); 
+   color: var(--caroulsel-color); 
    padding: 20px;
 }
 
@@ -202,7 +202,7 @@ summary {
     
     .horse-body-parts-grid-container {            /* grid container, the parent */  
         grid-template-columns:  40px 150px 40px 150px; /* 4 cols */
-        grid-template-rows:     repeat(16 auto);       /* 16 rows */
+        grid-template-rows:     repeat(16, auto);       /* 16 rows */
                            /* grid-template-areas: how to display columns and rows, using named grid items */
         grid-template-areas:
             "no-1   part-1   no-16   part-16"  
@@ -229,7 +229,7 @@ summary {
 
     .horse-body-parts-grid-container {            /* grid container, the parent */    
         grid-template-columns:  40px 150px; /* 2 cols */
-        grid-template-rows:     repeat(31 auto); /* 31 rows */
+        grid-template-rows:     repeat(31, auto); /* 31 rows */
                             /* grid-template-areas: how to display columns and rows, using named grid items */
         grid-template-areas:
             "no-1   part-1"  

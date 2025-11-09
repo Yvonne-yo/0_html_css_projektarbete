@@ -30,7 +30,7 @@
     --modal-bg-color: rgba(0, 0, 0, 0.5);  /* rgba(r, g, b, alpha); alpha=opacity */
     --modal-box-shadow: 20px 20px 20px rgba(173, 216, 230, 0.8); /* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; */
 
-    ---caroulsel-color: darkgreen;
+    --caroulsel-color: darkgreen;
     --summary-color: midnightblue;
     --summary-bg-color: lightblue;
 
