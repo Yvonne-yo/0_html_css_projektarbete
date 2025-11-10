@@ -40,4 +40,7 @@ att paketera detta lilla projekt på ett ställe. Filerna är små.
 #### Formulär
 Då detta projekt ej har någon server som svara på inskickat formulär, har jag lagt
 in en egen websida som svar till användaren.
+
+### Projektredovising
+Projektredovisning Deom av webbplats och kod 2025-11-09
 ### SLUT
