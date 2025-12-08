@@ -42,5 +42,5 @@ Då detta projekt ej har någon server som svara på inskickat formulär, har ja
 in en egen websida som svar till användaren.
 
 ### Projektredovising
-Projektredovisning Deom av webbplats och kod 2025-11-09
+Projektredovisning Demo av webbplats och kod 2025-11-10
 ### SLUT
